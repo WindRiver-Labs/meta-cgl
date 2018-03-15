@@ -17,7 +17,7 @@ RDEPENDS_${PN} += " \
 BBCLASSEXTEND = "native"
 PR = "r2"
 
-SRC_URI = "http://search.cpan.org/CPAN/authors/id/M/MA/MARKOV/MailTools-${PV}.tar.gz"
+SRC_URI = "http://perl.overmeer.net/mailtools/source/MailTools-${PV}.tar.gz"
 SRC_URI[md5sum] = "972468ab5207b90398d77bed4ffc361d"
 SRC_URI[sha256sum] = "dfee9e770257371112f20d978e637759e81bc4f19e97b083585c71ecab37b527"
 

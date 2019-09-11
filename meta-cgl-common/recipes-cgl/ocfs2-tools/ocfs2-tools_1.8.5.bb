@@ -21,6 +21,7 @@ SRC_URI = "git://github.com/markfasheh/ocfs2-tools \
     file://ocfs2.service \
     file://0001-Fix-build-with-glibc-2.28.patch \
     file://0001-mounted.ocfs2-use-sys-sysmacros.h-include-for-makede.patch \
+    file://0001-o2cb.init.sh-Remove-unneeded-lib-lsb-init-functions.patch \
 "
 SRCREV = "f1b4d073f08679f97b64b3eb88e586032f92a701"
 S = "${WORKDIR}/git"
@@ -32,11 +33,7 @@ DEPENDS = "corosync pacemaker \
     e2fsprogs e2fsprogs-native \
 "
 
-# lsbinitscripts are needed to replace /etc/init.d/functions supplied by initscripts (systemv)
-# They are not the same code!
-#
-RDEPENDS_${PN} = "bash coreutils net-tools module-init-tools e2fsprogs chkconfig glib-2.0 \
-                  ${@bb.utils.contains('DISTRO_FEATURES','systemd','lsbinitscripts','',d)}"
+RDEPENDS_${PN} = "bash coreutils net-tools module-init-tools e2fsprogs chkconfig glib-2.0"
 
 ASNEEDED_pn-${PN} = ""
 PARALLEL_MAKE = ""

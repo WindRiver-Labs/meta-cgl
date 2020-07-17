@@ -35,7 +35,7 @@ RDEPENDS_${PN} = "${@bb.utils.contains('DISTRO_FEATURES','systemd','initscripts-
 
 SYSTEMD_SERVICE_${PN} = "ucarp.service"
 SYSTEMD_AUTO_ENABLE = "disable"
-
+export FETCHCMD_wget = "/usr/bin/env wget --secure-protocol=TLSv1_2 -t 2 -T 30 --passive-ftp --no-check-certificate"
 EXTRA_OECONF += "--sysconfdir=${sysconfdir}/${BPN}"
 
 # fix the perms for config.rpath

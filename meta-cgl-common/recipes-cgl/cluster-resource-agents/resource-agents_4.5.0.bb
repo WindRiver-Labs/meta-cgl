@@ -14,7 +14,7 @@ LICENSE_${PN}-extra = "GPLv3"
 LICENSE_${PN}-extra-dbg = "GPLv3"
 LICENSE_ldirectord = "GPLv2+"
 
-SRC_URI = "git://github.com/ClusterLabs/resource-agents \
+SRC_URI = "git://github.com/ClusterLabs/resource-agents;branch=master;protocol=https \
            file://01-disable-doc-build.patch \
            file://02-set-OCF_ROOT_DIR-to-libdir-ocf.patch \
            file://03-fix-header-defs-lookup.patch \
